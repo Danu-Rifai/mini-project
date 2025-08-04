@@ -30,13 +30,13 @@ const analyzer = (input) => {
                 console.log(`status angka: bilangan prima`)
             }
         }
-
+        
     } else {
         console.log(`--- Hasil Analisis Kata ---\n`)
 
         let hasil = ""
 
-        for(let i = input.length-1; i>=0; i--) {
+        for(let i = input.length-1; i>=0; i--) { // kenapa harus minus 1?
             hasil = hasil + input[i]
         }
             console.log(`Balik kata: ${hasil}`)
@@ -48,6 +48,15 @@ const analyzer = (input) => {
         }
 
         console.log('Jumlah kata: ' + input.length)
+
+        let vokal = ['a', 'i', 'u', 'e', 'o', 'A', 'I', 'U', 'E', 'O']
+        let jumlahVokal = 0
+
+        for(let i = 0; i<input.length; i++) {
+            if(vokal.includes(input[i])) {
+                jumlahVokal++
+            }
+        } console.log(`Jumlah vokal: ${jumlahVokal}`)
     }
 }
 
